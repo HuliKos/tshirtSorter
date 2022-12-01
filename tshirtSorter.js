@@ -21,3 +21,18 @@ function tShirtSorter (input){
 }
 
 tShirtSorter('lsmslmslsmsmsslm')
+
+
+const tshirtSorter = (str) => {
+    let charCount = {
+        's': 0,
+        'm': 0,
+        'l': 0,
+    };
+
+    for (let i = 0; i < str.length; i++) {
+        charCount[str[i]]++;
+    }
+
+    return 's'.repeat(charCount['s'])+'l'.repeat(charCount['l'])+'l'.repeat(charCount['l'])
+};
